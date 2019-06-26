@@ -8,7 +8,7 @@ Set environment options:
   - `DOMAIN`
 
 Create or map volume for ssl certificate:
-  - `/var/www/certbot`
+  - `/etc/letsencrypt`
 
 ### 2. Generate certificate
 Run `mchus/certgot:initial`
