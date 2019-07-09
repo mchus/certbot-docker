@@ -17,3 +17,10 @@ Certbot will automatically register your domain name and then container stops. C
 ### 3. Start renewal container
 Run `mchus/certbot:renewal`
 Container will renew you certificate every day and then exits. You need to automatically restart container to maintain certificate availability for your domain.
+
+`docker run --name certbot_initial \
+-v /etc/letsencrypt:/etc/letsencrypt \
+-v /var/www/certbot:/var/www/certbot \
+-e EMAIL=steve@apple.com \
+-e DOMAIN=apple.com \
+--rm mchus/certbot:initial`
