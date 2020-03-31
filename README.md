@@ -15,11 +15,17 @@ Run `mchus/certbot:initial`
 Certbot will automatically register your domain name and then container stops. Check container logs for  information.
 
 `docker run --name certbot_initial \
+
 -v /etc/letsencrypt:/etc/letsencrypt \
+
 -v /var/www/certbot:/var/www/certbot \
+
 -e EMAIL=steve@apple.com \
+
 -e DOMAIN=apple.com \
+
 -p 80:80 \
+
 --rm mchus/certbot:initial`
 
 
